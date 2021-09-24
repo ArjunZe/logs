@@ -1,0 +1,29 @@
+TRANSF_1_1_1> JAVA PLUGIN_1762 [2021-09-15 01:54:21.319] [ERROR] Wed Sep 15 01:54:21 UTC 2021 WARN: Caught while disconnecting...
+
+EXCEPTION STACK TRACE:
+
+
+
+** BEGIN NESTED EXCEPTION ** 
+
+javax.net.ssl.SSLException
+MESSAGE: closing inbound before receiving peer's close_notify
+
+STACKTRACE:
+
+javax.net.ssl.SSLException: closing inbound before receiving peer's close_notify
+	at sun.security.ssl.Alert.createSSLException(Alert.java:133)
+	at sun.security.ssl.Alert.createSSLException(Alert.java:117)
+	at sun.security.ssl.TransportContext.fatal(TransportContext.java:335)
+	at sun.security.ssl.TransportContext.fatal(TransportContext.java:291)
+	at sun.security.ssl.TransportContext.fatal(TransportContext.java:282)
+	at sun.security.ssl.SSLSocketImpl.shutdownInput(SSLSocketImpl.java:660)
+	at sun.security.ssl.SSLSocketImpl.shutdownInput(SSLSocketImpl.java:639)
+	at com.mysql.cj.protocol.a.NativeProtocol.quit(NativeProtocol.java:1313)
+	at com.mysql.cj.NativeSession.quit(NativeSession.java:182)
+	at com.mysql.cj.jdbc.ConnectionImpl.realClose(ConnectionImpl.java:1743)
+	at com.mysql.cj.jdbc.ConnectionImpl.close(ConnectionImpl.java:717)
+	at com.informatica.powercenter.server.jtx.JTXPartitionDriverImplGen.execute(JTXPartitionDriverImplGen.java:380)
+
+
+** END NESTED EXCEPTION **
