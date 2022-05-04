@@ -1,0 +1,185 @@
+{
+	"swagger": "2.0",
+	"info": {
+		"description": null,
+		"version": "1.0.0",
+		"title": null,
+		"termsOfService": null,
+		"contact": null,
+		"license": null
+	},
+	"host": "apg-sit.abc.com",
+	"basePath": "/contract-maintenance-api/v1",
+	"schemes": ["https"],
+	"paths": {
+		"/billing/contracts/calculate-premium": {
+			"post": {
+				"tags": ["fhir_Product_Rates_U65_CalcPremium"],
+				"summary": null,
+				"description": null,
+				"operationId": "fhir_Product_Rates_U65_CalcPremium",
+				"produces": ["application/json"],
+				"consumes": ["application/json"],
+				"parameters": [{
+						"name": "body",
+						"in": "body",
+						"description": null,
+						"required": false,
+						"schema": {
+							"type": "object",
+							"items": {
+								"$ref": "#/definitions/fhir_Product_Rates_U65_CalcPremium_Request##body"
+							}
+						}
+					}, {
+						"name": "Cookie",
+						"in": "header",
+						"description": null,
+						"required": false,
+						"type": "string"
+					}, {
+						"name": "Authorization",
+						"in": "header",
+						"description": null,
+						"required": false,
+						"type": "string"
+					}, {
+						"name": "Accept",
+						"in": "header",
+						"description": null,
+						"required": false,
+						"type": "string"
+					}, {
+						"name": "apigw-id",
+						"in": "header",
+						"description": null,
+						"required": false,
+						"type": "string"
+					}, {
+						"name": "Content-Type",
+						"in": "header",
+						"description": null,
+						"required": false,
+						"type": "string"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "successful operation",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/fhir_Product_Rates_U65_CalcPremium"
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+	"definitions": {
+		"fhir_Product_Rates_U65_CalcPremium_1##premiums": {
+			"properties": {
+				"coverageToDt": {
+					"type": "string"
+				},
+				"coverageFromDt": {
+					"type": "string"
+				},
+				"billLevelId": {
+					"type": "string"
+				},
+				"billLevel": {
+					"type": "string"
+				},
+				"subscriberPrem": {
+					"type": "string"
+				},
+				"planId": {
+					"type": "string"
+				},
+				"totalPrem": {
+					"type": "string"
+				},
+				"dependentsPrem": {
+					"type": "string"
+				},
+				"planBillingId": {
+					"type": "string"
+				}
+			}
+		},
+		"fhir_Product_Rates_U65_CalcPremium_1": {
+			"type": "object",
+			"properties": {
+				"rateToDt": {
+					"type": "string"
+				},
+				"subGroupIdentifier": {
+					"type": "string"
+				},
+				"totalSubsidy": {
+					"type": "string"
+				},
+				"rateFromDt": {
+					"type": "string"
+				},
+				"subscriberPrem": {
+					"type": "string"
+				},
+				"premiums": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/fhir_Product_Rates_U65_CalcPremium_1##premiums"
+					}
+				},
+				"planId": {
+					"type": "string"
+				},
+				"totalPrem": {
+					"type": "string"
+				},
+				"groupIdentifier": {
+					"type": "string"
+				},
+				"dependentsPrem": {
+					"type": "string"
+				},
+				"subscriberIdentifier": {
+					"type": "string"
+				}
+			}
+		},
+		"fhir_Product_Rates_U65_CalcPremium_Request##body": {
+			"type": "object",
+			"properties": {
+				"groupIdentifier": {
+					"type": "string"
+				},
+				"subGroupIdentifier": {
+					"type": "string"
+				},
+				"subscriberIdentifier": {
+					"type": "string"
+				},
+				"rateFromDt": {
+					"type": "string"
+				},
+				"rateToDt": {
+					"type": "string"
+				},
+				"premiumBasis": {
+					"type": "string"
+				}
+			}
+		},
+		"fhir_Product_Rates_U65_CalcPremium": {
+			"properties": {
+				"type": "array",
+				"items": {
+					"$ref": "#/definitions/fhir_Product_Rates_U65_CalcPremium_1"
+				}
+			}
+		}
+	}
+}
