@@ -28,7 +28,7 @@
           "schema" : {
             "type" : "array",
             "items" : {
-              "$ref" : "#/definitions/fhir_Product_Rates_U65_CalcPremium_Request##body"
+              "$ref" : "#/definitions/fhir_Product_Rates_U65_CalcPremium_Request"
             }
           }
         } ],
