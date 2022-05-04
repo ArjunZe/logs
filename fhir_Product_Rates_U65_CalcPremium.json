@@ -26,7 +26,6 @@
 						"description": null,
 						"required": false,
 						"schema": {
-							"type": "object",
 							"items": {
 								"$ref": "#/definitions/fhir_Product_Rates_U65_CalcPremium_Request"
 							}
@@ -151,7 +150,6 @@
 			}
 		},
 		"fhir_Product_Rates_U65_CalcPremium_Request": {
-			"type": "object",
 			"properties": {
 				"groupIdentifier": {
 					"type": "string"
