@@ -28,7 +28,7 @@
 						"schema": {
 							"type": "object",
 							"items": {
-								"$ref": "#/definitions/fhir_Product_Rates_U65_CalcPremium_Request##body"
+								"$ref": "#/definitions/fhir_Product_Rates_U65_CalcPremium"
 							}
 						}
 					}, {
@@ -149,30 +149,7 @@
 					"type": "string"
 				}
 			}
-		},
-		"fhir_Product_Rates_U65_CalcPremium_Request##body": {
-			"type": "object",
-			"properties": {
-				"groupIdentifier": {
-					"type": "string"
-				},
-				"subGroupIdentifier": {
-					"type": "string"
-				},
-				"subscriberIdentifier": {
-					"type": "string"
-				},
-				"rateFromDt": {
-					"type": "string"
-				},
-				"rateToDt": {
-					"type": "string"
-				},
-				"premiumBasis": {
-					"type": "string"
-				}
-			}
-		},
+		}
 		"fhir_Product_Rates_U65_CalcPremium": {
 			"properties": {
 				"type": "array",
